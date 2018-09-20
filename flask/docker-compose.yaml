@@ -1,0 +1,12 @@
+version: '2.0'
+services:
+  web:
+    container_name: flask
+    build:
+      dockerfile: Dockerfile
+      context: .
+    image: flask_image:1.0
+    volumes:
+      - ./main.py:/usr/app/main.py
+    ports:
+      - 7000:5000
